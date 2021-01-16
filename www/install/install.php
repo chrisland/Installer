@@ -318,8 +318,8 @@ class Installer {
 
     if ($username && $password && $time) {
       $q = "INSERT INTO `users`";
-      $q .= " (`userID`, `userName`, `userCachedPasswordHash`, `userCachedPasswordHashTime`, `userNetwork`)";
-      $q .= " values ( 1, '$username', '$password', $time,'SCHULEINTERN');";
+      $q .= " (`userID`, `userName`, `userFirstName`, `userLastName`, `userCachedPasswordHash`, `userCachedPasswordHashTime`, `userNetwork`, `userLastPasswordChangeRemote`, `userEMail`,`userRemoteUserID`,`userAsvID`,`userSignature`,`userMailInitialPassword`,`userAutoresponseText`)";
+      $q .= " values ( 1, '$username', 'admin', 'istrator',  '$password', $time, 'SCHULEINTERN', 0, '".$_POST['adminemail'] ."',0,0,0,0,0);";
 
       if ( !$this->mysqli->query($q) ) {
         return array(
