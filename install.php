@@ -34,7 +34,7 @@ switch ($action) {
             'upperDir' => FOLDER_ROOT,
             'upperDirWriteable' => is_writable(FOLDER_ROOT), // Ein Verzeichnis nach oben
             'phpVersion' => phpversion(),
-            'phpVersionCompare' => version_compare(phpversion(), '7.2.0', '>'),
+            'phpVersionCompare' => version_compare(phpversion(), '7.4.0', '>'),
             'branches' => $branches,
             'zipEnable' => $zip ? true : false
         );
@@ -520,12 +520,12 @@ class Installer
             );
         }
 
-        if (!file_exists(FOLDER_TEMP . "/Upload/framework/database.sql")) {
+        if (!file_exists(FOLDER_ROOT . "/framework/database.sql")) {
             return array(
                 'errorMsg' => 'Fehler beim Download und entpacken. database.sql wurde nicht gefunden.'
             );
         }
-        $sqlInstallation = file_get_contents(FOLDER_TEMP . "/Upload/framework/database.sql");
+        $sqlInstallation = file_get_contents(FOLDER_ROOT . "/framework/database.sql");
 
         if (!$sqlInstallation) {
             return array(
