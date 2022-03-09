@@ -102,7 +102,7 @@ class GlobalSettings {
      */
     public $hasNotenverwaltung = {{notenverwaltung}};
 
-        /**
+    /**
      * Daten der Azure App, die für den Zugriff auf die GraphAPI nötig ist.
      * @var array
      */
@@ -123,6 +123,12 @@ class GlobalSettings {
      * Domain des Update Servers
      * @var string
      */
-        public $updateServer = "{{updateServer}}";
+    public $updateServer = "{{updateServer}}";
+
+    /**
+     * Domain des Extension Servers
+     * @var string
+     */
+    public $extensionsServer = "https://extensions.schule-intern.de/";
 
 }

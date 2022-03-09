@@ -7,7 +7,7 @@
         <li><a href="http://doku.schule-intern.de/display/ADMINHANDBUCH" target="_blank">Adminhandbuch</a></li>
         <li><a href="https://www.schule-intern.de/forum/" target="_blank">Support Forum</a></li>
         <li><a href="https://www.github.com/schuleintern" target="_blank">Github</a></li>
-        <li>Installer Version 1.1</li>
+        <li>Installer Version 1.2</li>
       </ul>
     </nav>
 
